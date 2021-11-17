@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="row_padding_vertical">8dp</dimen>
+    <dimen name="activity_horizontal_margin">8dp</dimen>
+    <dimen name="gridview_padding">20dp</dimen>
+    <dimen name="margin_large">56dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_medium2">24dp</dimen>
+    <dimen name="margin_large2">64dp</dimen>
+    <dimen name="margin_medium3">32dp</dimen>
+    <dimen name="margin_small2">12dp</dimen>
+    <dimen name="margin_medium4">48dp</dimen>
+</resources>

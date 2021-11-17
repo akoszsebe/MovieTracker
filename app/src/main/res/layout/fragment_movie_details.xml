@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView_image"
+            android:layout_width="360dp"
+            android:layout_height="400dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="240dp"
+            android:foreground="@drawable/details_placeholder_imagegradient1"
+            android:scaleType="fitEnd"
+            android:src="@drawable/details_placeholder_imagegradient2"
+            tools:background="@drawable/details_placeholder_image" />
+
+        <TextView
+            android:id="@+id/textView_title"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_medium4"
+            android:layout_marginTop="@dimen/margin_large2"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:textColor="@color/gray"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            tools:text="Program Title" />
+
+        <ImageView
+            android:id="@+id/imageView_favorite"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/textView_title"
+            android:layout_toEndOf="@+id/textView_title"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:src="@drawable/favorite_unfill"
+            android:stateListAnimator="@animator/item_state_selector"/>
+
+        <TextView
+            android:id="@+id/textView_additional_info"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_below="@+id/textView_title"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_medium4"
+            android:layout_marginTop="@dimen/margin_small2"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:alpha="0.7"
+            android:letterSpacing="0.03"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            tools:text="Day, 00:00-00:00  I  Genre, Genre  I  ★ IMDb 6.2  I  Year  I  # Seasons" />
+
+        <TextView
+            android:id="@+id/textView_description"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_additional_info"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_medium4"
+            android:layout_marginTop="@dimen/margin_medium3"
+            android:ellipsize="marquee"
+            android:letterSpacing="0.03"
+            android:lineSpacingExtra="1sp"
+            android:maxLines="3"
+            android:singleLine="false"
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu condimentum lorem, quis pulvinar sapien. Donec ullamcorper tellus non semper venenatis..." />
+
+        <ImageView
+            android:id="@+id/imageView_expand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView_description"
+            android:layout_toEndOf="@+id/textView_description"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:src="@drawable/ic_add"
+            android:visibility="gone"
+            android:stateListAnimator="@animator/item_state_selector"/>
+
+        <TextView
+            android:id="@+id/textView_cast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_description"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_medium4"
+            android:layout_marginTop="@dimen/margin_large2"
+            android:lineSpacingExtra="5sp"
+            android:text="@string/cast"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.leanback.widget.HorizontalGridView
+            android:id="@+id/horizontalGridView_cast"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/textView_cast"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_medium4"
+            android:paddingTop="@dimen/margin_small"
+            android:paddingEnd="@dimen/margin_medium4"
+            android:paddingBottom="@dimen/margin_small"
+            app:numberOfColumns="1" />
+
+        <TextView
+            android:id="@+id/textView_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/horizontalGridView_cast"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_medium4"
+            android:layout_marginTop="@dimen/margin_medium4"
+            android:lineSpacingExtra="5sp"
+            android:text="@string/review"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_review_empty"
+            android:layout_width="match_parent"
+            android:layout_height="162dp"
+            android:layout_below="@+id/textView_review"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_medium4"
+            android:paddingTop="@dimen/margin_small2"
+            android:text="@string/no_reviews"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <androidx.leanback.widget.HorizontalGridView
+            android:id="@+id/horizontalGridView_review"
+            android:layout_width="match_parent"
+            android:layout_height="162dp"
+            android:layout_below="@+id/textView_review"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_medium4"
+            android:paddingTop="@dimen/margin_small2"
+            android:paddingEnd="@dimen/margin_medium4"
+            android:paddingBottom="@dimen/margin_small2"
+            app:numberOfColumns="1" />
+
+        <TextView
+            android:id="@+id/textView_videos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/horizontalGridView_review"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_medium4"
+            android:layout_marginTop="@dimen/margin_medium4"
+            android:lineSpacingExtra="5sp"
+            android:text="@string/videos"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_videos_empty"
+            android:layout_width="match_parent"
+            android:layout_height="162dp"
+            android:layout_below="@+id/textView_videos"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_medium4"
+            android:paddingTop="@dimen/margin_small2"
+            android:text="@string/no_videos"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <androidx.leanback.widget.HorizontalGridView
+            android:id="@+id/horizontalGridView_videos"
+            android:layout_width="match_parent"
+            android:layout_height="162dp"
+            android:layout_below="@+id/textView_videos"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="@dimen/margin_large2"
+            android:clickable="true"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_medium4"
+            android:paddingTop="@dimen/margin_small2"
+            android:paddingEnd="@dimen/margin_medium4"
+            android:paddingBottom="@dimen/margin_small"
+            app:numberOfColumns="1" />
+    </RelativeLayout>
+</ScrollView>

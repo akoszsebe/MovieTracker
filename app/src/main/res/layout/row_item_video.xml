@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="184dp"
+    android:layout_height="136dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/darkgray"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:stateListAnimator="@animator/item_state_selector">
+
+    <ImageView
+        android:id="@+id/imageView_image"
+        android:layout_width="match_parent"
+        android:layout_height="104dp"
+        android:gravity="top"
+        android:scaleType="centerCrop"
+        android:src="@drawable/details_placeholder_image" />
+
+    <TextView
+        android:id="@+id/textView_name"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginBottom="3dp"
+        android:gravity="bottom"
+        android:letterSpacing="0.03"
+        android:textColor="@color/gray"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        tools:text="John Doe" />
+    <ProgressBar
+        android:id="@+id/progressBar_videoProgress"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progressTint="#e57373"
+        android:progress="10" />
+
+</LinearLayout>

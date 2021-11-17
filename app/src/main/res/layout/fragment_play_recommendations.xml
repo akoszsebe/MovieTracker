@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/playerView_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        app:auto_show="true"
+        app:controller_layout_id="@layout/custom_exo_playback_control_view"
+        app:fastforward_increment="30000"
+        app:repeat_toggle_modes="none"
+        app:resize_mode="fixed_width"
+        app:rewind_increment="10000"
+        app:use_controller="true"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_error"
+        android:layout_width="match_parent"
+        android:background="#ef5350"
+        android:gravity="center_horizontal"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:layout_margin="@dimen/margin_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ops"/>
+        <TextView
+            android:id="@+id/textView_error"
+            android:layout_margin="@dimen/margin_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Something went wrong"/>
+    </LinearLayout>
+</FrameLayout>

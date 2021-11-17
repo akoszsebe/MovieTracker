@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_movietrackerplay.xml"
+    app:startDestination="@id/play_fragment">
+
+    <fragment
+        android:id="@+id/play_fragment"
+        android:name="com.example.movietracker.ui.play.PlayFragment"
+        android:label="@string/genreSelection"
+        tools:layout="@layout/fragment_play" >
+        <argument
+            android:name="index"
+            app:argType="integer" />
+        <argument
+            android:name="videos"
+            app:argType="com.example.movietracker.data.networking.models.VideosResponse" />
+        <action
+            android:id="@+id/action_play_fragment_to_play_recommendation_fragment"
+            app:destination="@id/play_recommendation_fragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/play_recommendation_fragment"
+        android:name="com.example.movietracker.ui.playrecommendation.PlayRecommendationFragment"
+        android:label="@string/genreSelection"
+        tools:layout="@layout/fragment_play_recommendations" >
+        <argument
+            android:name="videoId"
+            app:argType="string" />
+    </fragment>
+</navigation>

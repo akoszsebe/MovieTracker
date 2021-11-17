@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView_title"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_medium4"
+            android:layout_marginTop="@dimen/margin_large2"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:textColor="@color/gray"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            tools:text="Program Title" />
+
+        <TextView
+            android:id="@+id/textView_description"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_medium4"
+            android:layout_marginTop="@dimen/margin_medium3"
+            android:ellipsize="marquee"
+            android:letterSpacing="0.03"
+            android:lineSpacingExtra="1sp"
+            android:singleLine="false"
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu condimentum lorem, quis pulvinar sapien. Donec ullamcorper tellus non semper venenatis..." />
+
+        <Button
+            android:id="@+id/button_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium4"
+            android:layout_marginTop="@dimen/margin_medium3"
+            android:layout_marginBottom="@dimen/margin_medium3"
+            android:background="@drawable/button_background"
+            android:clickable="true"
+            android:stateListAnimator="@animator/item_state_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="@string/back" />
+    </LinearLayout>
+</ScrollView>

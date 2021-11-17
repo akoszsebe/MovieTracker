@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="184dp"
+    android:layout_height="136dp"
+    android:background="@color/darkgray"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:stateListAnimator="@animator/item_state_selector">
+
+    <TextView
+        android:id="@+id/textView_stars"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:gravity="top"
+        android:letterSpacing="0.2"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        tools:text="★★★★" />
+
+    <TextView
+        android:id="@+id/textView_text"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:alpha="0.7"
+        android:ellipsize="marquee"
+        android:gravity="top"
+        android:maxLines="5"
+        android:lineSpacingExtra="2sp"
+        android:textColor="@color/gray"
+        android:textSize="10sp"
+        tools:text="John Doe" />
+
+    <TextView
+        android:id="@+id/textView_author"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_margin="@dimen/margin_small"
+        android:gravity="bottom"
+        android:lineSpacingExtra="2sp"
+        android:textColor="@color/gray"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        tools:text="John Doe" />
+
+</LinearLayout>

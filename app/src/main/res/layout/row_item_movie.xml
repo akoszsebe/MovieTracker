@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="162dp"
+    android:clickable="true"
+    android:elevation="2dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/row_padding_vertical"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/row_padding_vertical"
+    android:stateListAnimator="@animator/item_state_selector"
+    app:cardBackgroundColor="#242424">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="108dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/poster_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/imageView_favorite"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="bottom"
+                android:layout_margin="@dimen/margin_small"
+                android:alpha="0.8"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:src="@drawable/favorite_fill" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/details_layout"
+            android:layout_width="114dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_small"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView_date"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="2sp"
+                android:textColor="@color/gray"
+                android:textSize="10sp" />
+
+            <ScrollView
+                android:id="@+id/scrollView_title"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/textView_date"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:scrollbars="none">
+
+                <TextView
+                    android:id="@+id/textView_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="0sp"
+                    android:textAppearance="@style/moviedetailcard_title" />
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/textView_genres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scrollView_title"
+                android:alpha="0.7"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="2sp"
+                android:textColor="@color/gray"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/textView_rates"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="start"
+                android:alpha="0.7"
+                android:drawableStart="@drawable/ic_star"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="2sp"
+                android:textColor="@color/gray"
+                android:textSize="10sp"
+                tools:ignore="RtlCompat" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

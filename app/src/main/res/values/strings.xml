@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MovieTracker</string>
+    <string name="genreSelection">Genre Selection</string>
+    <string name="choose_genres_you_want_to_watch">Choose genres you want to WATCH!</string>
+    <string name="no_selected_genres">No selected Genres</string>
+    <string name="cast">Cast</string>
+    <string name="review">Review</string>
+    <string name="videos">Videos</string>
+    <string name="ok">Ok</string>
+    <string name="back">Back</string>
+    <string name="continue_txt">Continue</string>
+    <string name="no_reviews">No reviews</string>
+    <string name="no_videos">No videos</string>
+    <string name="youtube_recommendations">Youtube recommendations</string>
+    <string name="cancel">Cancel</string>
+    <string name="ops">Ops :)</string>
+</resources>
